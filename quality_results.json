@@ -1,0 +1,68 @@
+{
+    "INT4": [
+        {
+            "question": "What is a CPU cache? Explain its purpose.",
+            "answer": "A CPU cache is a temporary storage area within the CPU that stores frequently accessed data. The purpose of a CPU cache is to improve the performance of the CPU by reducing the number of times data needs to be fetched from the main memory.\n\nThe cache is designed to store data that is frequently accessed by the CPU. This data is stored in the cache, which is located near the CPU's memory controller. When the CPU needs to access the data, it first checks the cache to see"
+        },
+        {
+            "question": "Explain the difference between RAM and ROM.",
+            "answer": "RAM (Random Access Memory) and ROM (Read Only Memory) are two types of computer memory that store data.\n\nRAM:\nRAM is a type of computer memory that is volatile, meaning that it changes when the computer is powered off. This means that when the computer is turned off, the data stored in RAM is lost. RAM is used to store temporary data, such as program variables, while the computer is running.\n\nROM:\nROM (Read Only Memory"
+        },
+        {
+            "question": "What is machine learning? Give two examples.",
+            "answer": "Machine learning is a field that involves the development of algorithms and models that can learn from data without being explicitly programmed. It is a powerful tool for analyzing and understanding large datasets, and it has many applications in various fields, including healthcare, finance, and marketing.\n\n1. Example 1: Predicting Stock Prices\n\nOne of the most famous examples of machine learning in action is the stock market. Traders use algorithms to predict the future price of stock"
+        },
+        {
+            "question": "Explain how TCP works in computer networks.",
+            "answer": "TCP (Transmission Control Protocol) is a protocol that is used in computer networks to manage the flow of data between two or more computers. TCP works by establishing a connection between two or more computers, which allows data to be transmitted between them.\n\nTCP works by sending a series of packets containing data, along with a header that contains information about the packet, such as its destination and the size of the data. The packets are then sent to the destination computer, where"
+        },
+        {
+            "question": "What is the difference between a compiler and an interpreter?",
+            "answer": "A compiler and an interpreter are two different types of software that are used to convert one programming language into another.\n\nA compiler is a software tool that translates a high-level programming language (such as C or C++) into machine code that can be executed by a computer. The compiler takes the high-level language syntax and generates machine code that can be executed by the computer's processor.\n\nAn interpreter, on the other hand, is a software tool that translates a"
+        }
+    ],
+    "INT8": [
+        {
+            "question": "What is a CPU cache? Explain its purpose.",
+            "answer": "A CPU cache is a temporary storage area within the CPU that stores frequently accessed data and instructions. It is used to improve the performance of the CPU by reducing the time it takes to access data from the main memory.\n\nThe purpose of a CPU cache is to reduce the time it takes to access data from the main memory, which is the most expensive part of the CPU. By storing frequently accessed data and instructions in the cache, the CPU can access them faster, reducing the load on the main"
+        },
+        {
+            "question": "Explain the difference between RAM and ROM.",
+            "answer": "RAM (Random Access Memory) and ROM (Read Only Memory) are two types of computer memory that store data and instructions.\n\nRAM is volatile memory, meaning that it is lost when the computer is turned off. It is used for temporary storage of data and instructions, and it is accessed quickly. RAM is used for processing and executing instructions, and it is updated in real-time.\n\nROM (Read Only Memory) is non-volatile memory, meaning that it remains"
+        },
+        {
+            "question": "What is machine learning? Give two examples.",
+            "answer": "Machine learning is a field of artificial intelligence that enables computers to learn and improve their performance without being explicitly programmed. It is a powerful tool for automating tasks and improving decision-making in various fields, including healthcare, finance, and marketing.\n\n1. Healthcare: Machine learning algorithms can be used to analyze large amounts of medical data to identify patterns and trends that may help predict disease outcomes or identify potential health risks. For example, machine learning algorithms can"
+        },
+        {
+            "question": "Explain how TCP works in computer networks.",
+            "answer": "TCP (Transmission Control Protocol) is a protocol that is used in computer networks to manage the flow of data between two or more computers. It is a layered protocol that consists of three layers: the application layer, the transport layer, and the network layer.\n\nThe application layer is responsible for managing the communication between applications on different computers. It handles the transmission of data, including the format, length, and content of the data. The application layer is responsible for establishing"
+        },
+        {
+            "question": "What is the difference between a compiler and an interpreter?",
+            "answer": "A compiler and an interpreter are two different software tools that work together to convert a high-level programming language (such as C++ or Java) into machine code (such as binary or assembly language).\n\nHere's how the process works:\n\n1. A compiler takes a high-level programming language (such as C++ or Java) and generates machine code that can be executed by a computer. This machine code is called a \"compiled\" or \"object\" file.\n"
+        }
+    ],
+    "FP16": [
+        {
+            "question": "What is a CPU cache? Explain its purpose.",
+            "answer": "A CPU cache is a temporary storage area within the CPU that stores frequently accessed data and instructions. It is used to improve the performance of the CPU by reducing the time it takes to access data from the main memory.\n\nThe purpose of a CPU cache is to reduce the time it takes to access data from the main memory, which is the most expensive part of the CPU. By storing frequently accessed data and instructions in the cache, the CPU can access them faster, reducing the load on the main"
+        },
+        {
+            "question": "Explain the difference between RAM and ROM.",
+            "answer": "RAM (Random Access Memory) and ROM (Read Only Memory) are two types of computer memory that store data and instructions.\n\nRAM is volatile memory, which means that it is lost when the computer is turned off. This means that when you exit the program or close the window, the data stored in RAM is lost.\n\nROM (Read Only Memory) is non-volatile memory, which means that it remains even when the computer is turned off. This means that the"
+        },
+        {
+            "question": "What is machine learning? Give two examples.",
+            "answer": "Machine learning (ML) is a field of artificial intelligence that enables computers to learn and improve their performance without being explicitly programmed. It is a subset of artificial intelligence that focuses on developing algorithms that can learn from data and make predictions based on that data.\n\nHere are two examples of machine learning:\n\n1. Image recognition: Machine learning algorithms are used to recognize images, such as faces, cars, or animals. For example, Google's TensorFlow library is used to"
+        },
+        {
+            "question": "Explain how TCP works in computer networks.",
+            "answer": "TCP (Transmission Control Protocol) is a protocol that is used in computer networks to manage the flow of data between two or more computers. TCP is a connection-oriented protocol, which means that it establishes a connection between two or more computers before sending data. TCP uses a three-way handshake to establish a connection between the sender and the receiver.\n\nThe three-way handshake consists of three steps:\n\n1. The sender sends a SYN"
+        },
+        {
+            "question": "What is the difference between a compiler and an interpreter?",
+            "answer": "A compiler and an interpreter are two different software tools that are used to convert a high-level programming language (such as C++ or Java) into machine code (such as binary or assembly language).\n\nHere's a brief explanation of the differences between a compiler and an interpreter:\n\n1. Compiler:\nA compiler is a software tool that takes a high-level programming language (such as C++ or Java) and converts it into a series of machine code instructions that can"
+        }
+    ]
+}
