@@ -369,4 +369,4 @@ The project combines practical C++ inference development with hands-on investiga
 
 ## License
 
-Add your chosen open-source license before publishing this repository. Also verify the licensing terms of the model and its exported weights separately.
+This project is released under the MIT License. See the `LICENSE` file for details. The licensing terms of the TinyLlama model and its exported weights should be checked separately.
