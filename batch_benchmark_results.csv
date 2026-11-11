@@ -1,0 +1,5 @@
+timestamp,model,batch_size,time_seconds,requests_per_second
+2026-11-10T18:11:50,models/tinyllama-int4,1,2.4028,0.4162
+2026-11-10T18:11:53,models/tinyllama-int4,2,2.764,0.7236
+2026-11-10T18:11:57,models/tinyllama-int4,4,4.1113,0.9729
+2026-11-10T18:12:03,models/tinyllama-int4,8,6.1399,1.3029

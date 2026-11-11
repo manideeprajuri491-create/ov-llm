@@ -1,0 +1,6 @@
+timestamp,model,threads,performance_hint,average_time_seconds,throughput_tokens_per_sec,cpu_busy_cores,peak_ram_mb
+2026-11-10T18:01:31,models/tinyllama-int4,4,LATENCY,4.7971,26.8912,3.96,1364.71
+2026-11-10T18:05:29,models/tinyllama-int4,1,LATENCY,10.4743,12.3158,1.0,1364.25
+2026-11-10T18:06:25,models/tinyllama-int4,2,LATENCY,5.6681,22.7589,2.0,1364.5
+2026-11-10T18:07:11,models/tinyllama-int4,8,LATENCY,4.2373,30.4436,5.94,1365.34
+2026-11-10T18:11:00,models/tinyllama-int4,auto,LATENCY,4.5996,28.0456,5.92,1368.31

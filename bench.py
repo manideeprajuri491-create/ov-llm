@@ -2,6 +2,8 @@
 import openvino_genai as ov_genai
 import time
 import numpy as np
+import csv
+from datetime import datetime
 
 def benchmark():
     models = {
@@ -13,44 +15,77 @@ def benchmark():
     prompt = "What is a CPU cache?"
     token_counts = (50, 100, 300)
 
-    for name, model_path in models.items():
-        print(f"\n{'='*50}")
-        print(f"TinyLlama {name} CPU Benchmark")
-        print(f"{'='*50}")
+    csv_file = "benchmark_results.csv"
 
-        print("Loading model...")
-        pipe = ov_genai.LLMPipeline(model_path, "CPU")
+    with open(csv_file, "w", newline="") as file:
+        writer = csv.writer(file)
 
-        print("Warming up model...")
-        pipe.generate("Hello", max_new_tokens=10)
+        writer.writerow([
+            "timestamp",
+            "model",
+            "requested_tokens",
+            "estimated_generated_tokens",
+            "time_seconds",
+            "throughput_tokens_per_sec"
+        ])
 
-        tokenizer = pipe.get_tokenizer()
+        for name, model_path in models.items():
+            print(f"\n{'='*50}")
+            print(f"TinyLlama {name} CPU Benchmark")
+            print(f"{'='*50}")
 
-        for n in token_counts:
-            start = time.perf_counter()
+            print("Loading model...")
+            pipe = ov_genai.LLMPipeline(model_path, "CPU")
 
-            result = pipe.generate(
-                prompt,
-                max_new_tokens=n
-            )
+            print("Warming up model...")
+            pipe.generate("Hello", max_new_tokens=10)
 
-            total_time = time.perf_counter() - start
+            tokenizer = pipe.get_tokenizer()
 
-            tokenized = tokenizer.encode(result)
-            generated_tokens = int(np.prod(tokenized.input_ids.shape))
+            for n in token_counts:
+                start = time.perf_counter()
 
-            throughput = generated_tokens / total_time if total_time > 0 else 0
+                result = pipe.generate(
+                    prompt,
+                    max_new_tokens=n
+                )
 
-            print(
-                f"Requested: {n:3} | "
-                f"Generated: {generated_tokens:3} | "
-                f"Total: {total_time:6.2f} sec | "
-                f"Throughput: {throughput:5.2f} tokens/sec"
-            )
+                elapsed = time.perf_counter() - start
 
-        del pipe
+                tokenized = tokenizer.encode(result)
+                generated_tokens = int(
+                    np.prod(tokenized.input_ids.shape)
+                )
 
-    print("\nBenchmark completed.")
+                throughput = (
+                    generated_tokens / elapsed
+                    if elapsed > 0 else 0
+                )
+
+                timestamp = datetime.now().isoformat(
+                    timespec="seconds"
+                )
+
+                writer.writerow([
+                    timestamp,
+                    name,
+                    n,
+                    generated_tokens,
+                    round(elapsed, 4),
+                    round(throughput, 4)
+                ])
+
+                print(
+                    f"Requested: {n:3} | "
+                    f"Generated: {generated_tokens:3} | "
+                    f"Time: {elapsed:6.2f}s | "
+                    f"Throughput: {throughput:5.2f} tok/s"
+                )
+
+            del pipe
+
+    print(f"\nBenchmark completed. Results saved to {csv_file}")
+
 
 if __name__ == "__main__":
     benchmark()
