@@ -378,8 +378,6 @@ int main(int argc, char* argv[]) {
                     });
                 }
 
-                std::cout << "[DEBUG] Messages stored in history: "
-                          << history.size() << "\n";
             }
 
             return 0;
